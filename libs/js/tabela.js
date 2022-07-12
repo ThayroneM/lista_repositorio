@@ -14,9 +14,6 @@ window.addEventListener("load", function(event) {
         "paging": true,
         "autoWidth": false,
         "searching": true,
-        // "columnDefs": [
-        //     {"visible": false, "targets": 4}
-        // ]
     });
  
     // // #myInput is a <input type="text"> element

@@ -7,18 +7,76 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./libs/css/estilo.css">
+        <link rel="stylesheet" href="./libs/css/bootstrap.css">
+        <link rel="stylesheet" href="./libs/css/addons/datatables.min.css">
+        <link rel="stylesheet" href="./libs/css/addons/responsive.dataTables.min.css">
     </head>
     <body>
+        <div class="border rounded header">
+            <h1>Lista de Repositórios</h1>
+        </div>
 
-        
-       
+        <div class="conteudo">
+            <div style="text-align: center">
+                <h2>Filtros</h2>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-auto form-check" style="margin: 5px;">
+                    <input class="form-check-input" type="radio" name="radioFiltro" id="chkArquivado">
+                    <label class="form-check-label" for="chkArquivado">
+                    Arquivados
+                    </label>
+                </div>
+                <div class="col-auto form-check" style="margin: 5px;">
+                    <input class="form-check-input" type="radio" name="radioFiltro" id="chkDesabilitado">
+                    <label class="form-check-label" for="chkDesabilitado">
+                    Desabilitados
+                    </label>
+                </div>
+                <div class="col-auto form-check" style="margin: 5px;">
+                    <input class="form-check-input" type="radio" name="radioFiltro" id="chkDownload">
+                    <label class="form-check-label" for="chkDownload">
+                    Feito Downloads
+                    </label>
+                </div>
+                <div class="col-auto form-check" style="margin: 5px;">
+                    <input class="form-check-input" type="radio" name="radioFiltro" id="chkTodos" checked>
+                    <label class="form-check-label" for="chkTodos">
+                    Todos
+                    </label>
+                </div>
+            </div>
+            <table id="tblRepo" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Repositorio</th>
+                        <th>URL</th>
+                        <th>Data Ultimo Commit</th>
+                        <th>Arquivado</th>
+                        <th>Desabilitado</th>
+                        <th>Feito Downloads</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyRepositorios">
+                
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>Lista dos Repositórios GIT - 2022</p>
+        </div>
+         
     </body>
+    
     <script src="./libs/js/jquery.js"></script>
-    <script>
-        $.post('./Controller/TesteCtrl.php', {acao: "teste"},
-        function(data){
-            console.log(data)
-        })
-    </script>
+    <script src="./libs/js/popper.min.js"></script>
+    <script src="./libs/js/bootstrap.js"></script>
+    <script src="./libs/js/datatables.min.js"></script>
+    <script src="./libs/js/dataTables.responsive.min.js"></script>
+    <script src="./libs/js/auth.js"></script>
+    <script src="./libs/js/index.js"></script>
+    <script src="./libs/js/tabela.js"></script>
+
 </html>
